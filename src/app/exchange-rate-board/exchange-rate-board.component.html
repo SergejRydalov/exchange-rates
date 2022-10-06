@@ -1,0 +1,8 @@
+<div class="board_rate" *ngIf="pollingData$ | async as data">
+  <div class="rate" *ngFor="let valute of data">
+    <p class="rate__header">{{ valute.Name }}</p>
+    <div class="rate__exchange">
+      1 {{ valute.CharCode }} = {{ valute.Value }} RUB
+    </div>
+  </div>
+</div>
